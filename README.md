@@ -2,7 +2,7 @@
 * This is how to create a simple unix command interpreter using C language.
 * The program has the basic features of unix terminals like linux, ubuntu.
 * The program was written in C (C99) language and tested on ubuntu 20.04..
-* This is project was created by Adula Janet and Agbalu Eniola as part of the ALX SE program.
+* This project was created by Adula Janet and Agbalu Eniola as part of the ALX SE program.
 * The project was compiled using "gcc -Wall -pedantic -Werror -Wextra -std=gnu89 *.c -o hsh"
 
 ## Description of the project
@@ -21,7 +21,7 @@
 * Implement the setenv and unsetenv builtin commands.
 * Implement the builtin command cd.
 
-### Requirements for the project.
+## Requirements for the project.
 **We were instructed to the following:
 * Editors to use: vi, vim, or emacs.
 * All our files were to be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89.
@@ -64,7 +64,7 @@
   * wait4 (man 2 wait4)
   * write (man 2 write)
 
-### Compilation
+## Compilation
 ** Our shell "hsh" program is expected to work like this in interactive mode:
 ```
 $ ./hsh
@@ -89,8 +89,6 @@ hsh main.c shell.c test_ls_2
 $
 ```
 
-### Authors
+## Authors
 * Janet Adula <[Jannydear](https:github.com/Jannydear)>
 * Agbalu Eniola <[Eniola011](https:github.com/Eniola011)>
-
-
