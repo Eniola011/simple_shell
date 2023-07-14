@@ -1,4 +1,6 @@
+#ifndef _MAIN_H_
 #define _MAIN_H_
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -12,14 +14,16 @@
 extern char **environ;
 
 #define _BUFFY_ 1024
-#define _ERR_    0
-#define _NORMAL_ 1
-#define _SKIP_   2
-#define _SHELL_END_  3
-#define _BUILT_IN_  4
+
+#define _ERR_          0
+#define _NORMAL_       1
+#define _SKIP_         2
+#define _SHELL_END_    3
+#define _BUILT_IN_     4
 #define _PATH_NREADY_  5
-#define _PATH_READY_  6
-#define UNUSED _attribute_((unused))
+#define _PATH_READY_   6
+
+#define UNUSED __attribute__((unused))
 
 /**
  * execmd - execute commands
@@ -27,7 +31,6 @@ extern char **environ;
  * @args: arguments
  * Return: no value
  */
-
 void execmd(char *progrm, char **args);
 
 /**
@@ -36,7 +39,6 @@ void execmd(char *progrm, char **args);
  * @delimiter: separator
  * Return: array of strings
  */
-
 char **_strtok(char **buf, char *delimiter);
 
 /**
@@ -44,8 +46,7 @@ char **_strtok(char **buf, char *delimiter);
  * @counter: string
  * Return: linked strings
  */
-
-char *stralloc(int counter,...);
+char *_stralloc(int counter,...);
 
 /**
  * get_line - determine number of tokens.
@@ -53,8 +54,9 @@ char *stralloc(int counter,...);
  * @delim: separates string
  * Return: number of strings.
  */
-
 int get_line(char *strng, char *delim);
+
+/* string functions */
 int _strlen(char*);
 int _strcmp(char *, char*);
 char *_strcat(char *, char *);
@@ -66,7 +68,6 @@ char *_strcpy(char *, char*);
  * @program: token
  * *Return: full path.
  */
-
 char *grt_path(char *program);
 
 /**
@@ -75,7 +76,6 @@ char *grt_path(char *program);
  * @progrm: string
  * Return: complete path
  */
-
 char *find_path(char **pathenviron, char *program);
 
 /**
@@ -83,7 +83,6 @@ char *find_path(char **pathenviron, char *program);
  * @argumt: arguments
  * Return: success(1), fail(0).
  */
-
 unsigned int check_argmt(char *argumt);
 
 /**
@@ -91,7 +90,6 @@ unsigned int check_argmt(char *argumt);
  * @kii: key
  * Return: env
  */
-
 char *env_key(char *kii);
 
 /**
@@ -100,23 +98,29 @@ char *env_key(char *kii);
  * @funt: function pointer
  *
  */
-
 typedef struct _builtin
-
 {
 	char *cmd;
 	int (*funt)(char **);
-builts;
+}builts;
 
 /**
  * builtin - check for builtin functions.
  * @argument: argument
  * Return: the status code
  */
-
 int builtin(char **argument);
+
 int envprint(char **);
 int envcmd(char **);
 int sh_exit(char **);
+
+/**
+* hsh - myshell program
+* Return: detailed information on code.
+*/
+int hsh(void);
+
+
 
 #endif
