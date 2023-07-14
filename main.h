@@ -116,10 +116,10 @@ int envcmd(char **);
 int sh_exit(char **);
 
 /**
-* hsh - myshell program
+* eshell - myshell program
 * Return: detailed information on code.
 */
-int hsh(void);
+int eshell(void);
 
 
 
