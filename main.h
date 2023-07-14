@@ -68,7 +68,7 @@ char *_strcpy(char *, char*);
  * @program: token
  * *Return: full path.
  */
-char *grt_path(char *program);
+char *get_path(char *progrm);
 
 /**
  * find_path - find path
@@ -76,7 +76,7 @@ char *grt_path(char *program);
  * @progrm: string
  * Return: complete path
  */
-char *find_path(char **pathenviron, char *program);
+char *find_path(char **pathenviron, char *progrm);
 
 /**
  * check_argmt - check arguments inputted.
