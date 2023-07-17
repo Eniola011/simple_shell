@@ -18,11 +18,9 @@ void execmd(char *progrm, char **args)
 	}
 
 	if (child == 0)
-	{
-		if (execve(progrm, args, NULL) == -1)
-		{
-			perror("Error processing..");
-			exit(EXIT_FAILURE);
-		}
-	}
+
+	if (execve(progrm, args, NULL) == -1)
+
+	perror("Error processing..");
+	exit(EXIT_FAILURE);
 }

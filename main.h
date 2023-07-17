@@ -51,10 +51,10 @@ char *_stralloc(int counter, ...);
 /**
  * get_line - determine number of tokens.
  * @strng: inputted string
- * @delim: separates string
+ * @sep: separates string/delimiter
  * Return: number of strings.
  */
-int get_line(char *strng, char *delim);
+int get_line(char *strng, char *sep);
 
 /* string functions */
 int _strlen(char *);
