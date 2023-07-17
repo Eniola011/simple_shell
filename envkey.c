@@ -6,7 +6,7 @@
  *
  * Return: environ.
  */
-char *env_key(char **kii)
+char *env_key(char *kii)
 {
 	int index = 0;
 	char *copy;

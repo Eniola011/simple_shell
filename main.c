@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* main - tests code
-* Return: success(0)
-*/
+ * main - tests code
+ * Return: success(0)
+ */
 int main(void)
 {
 	unsigned int status;
