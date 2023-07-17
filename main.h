@@ -27,7 +27,7 @@ extern char **environ;
 
 /**
  * execmd - execute commands
- * @program: string
+ * @progrm: string
  * @args: arguments
  * Return: no value
  */
@@ -46,7 +46,7 @@ char **_strtok(char **buf, char *delimiter);
  * @counter: string
  * Return: linked strings
  */
-char *_stralloc(int counter,...);
+char *_stralloc(int counter, ...);
 
 /**
  * get_line - determine number of tokens.
@@ -57,15 +57,15 @@ char *_stralloc(int counter,...);
 int get_line(char *strng, char *delim);
 
 /* string functions */
-int _strlen(char*);
-int _strcmp(char *, char*);
+int _strlen(char *);
+int _strcmp(char *, char *);
 char *_strcat(char *, char *);
-char *_strstr(char *, char*);
-char *_strcpy(char *, char*);
+char *_strstr(char *, char *);
+char *_strcpy(char *, char *);
 
 /**
  * get_path - get path for the program.
- * @program: token
+ * @progrm: token
  * *Return: full path.
  */
 char *get_path(char *progrm);
@@ -102,7 +102,7 @@ typedef struct _builtin
 {
 	char *cmd;
 	int (*funt)(char **);
-}builts;
+} builts;
 
 /**
  * builtin - check for builtin functions.

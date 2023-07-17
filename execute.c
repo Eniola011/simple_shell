@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* execmd - execute commands
-* @progrm: string
-* @args: arguments
-* Returns: no value
-*/
+ * execmd - execute commands
+ * @progrm: string
+ * @args: arguments
+ * Returns: no value
+ */
 void execmd(char *progrm, char **args)
 {
 	pid_t child;

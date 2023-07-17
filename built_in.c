@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
-* builtin - check for builtin functions.
-* @argument: argument.
-* Return: the status code.
-*/
+ * builtin - check for builtin functions.
+ * @argument: argument.
+ * Return: the status code.
+ */
 int builtin(char **argument)
 {
 	int index = 0;
@@ -27,10 +27,10 @@ int builtin(char **argument)
 }
 
 /**
-* envprint - outputs the environment
-* @argmt: array of arguments
-* Return: success(_SKIP_)
-*/
+ * envprint - outputs the environment
+ * @argmt: array of arguments
+ * Return: success(_SKIP_)
+ */
 int envprint(__attribute__((unused))char **argmt)
 {
 	int n = 0;
@@ -47,20 +47,20 @@ int envprint(__attribute__((unused))char **argmt)
 }
 
 /**
-* sh_exit - leave shell program.
-* @argmts: array of arguments.
-* Return: success(_SHELL_END_)
-*/
+ * sh_exit - leave shell program.
+ * @argmts: array of arguments.
+ * Return: success(_SHELL_END_)
+ */
 int sh_exit(__attribute__((unused))char **argmts)
 {
 	return (3);
 }
 
 /**
-* envcmd - change of directories.
-* @arg: array of arguments.
-* Return: success(_SKIP_)
-*/
+ * envcmd - change of directories.
+ * @arg: array of arguments.
+ * Return: success(_SKIP_)
+ */
 int envcmd(char **arg)
 {
 	int status;
