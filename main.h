@@ -37,7 +37,7 @@ char *_strcpy(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 int _strlen(const char *s);
 char *_strcat(char *dest, char *src);
-void _memcpy(void *newptr, const void *ptr, unsigned int size);
+void _memcpy(void *dest, const void *src, unsigned int n);
 char *_strdup(const char *s);
 
 char *find_path(char *cmd);
