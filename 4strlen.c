@@ -5,13 +5,13 @@
  * @s: input string.
  * Return: length of a string.
  */
-int _strlen(char *s)
+int _strlen(const char *s)
 {
-	int num = 0;
+	int num;
 
-	while (s[num] != 0)
+	for (num = 0; s[num] != 0; num++)
 	{
-		num++;
 	}
+
 	return (num);
 }
