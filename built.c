@@ -16,7 +16,7 @@ void builtin_command(char **arg)
 		{"env", shell_env},
 	};
 
-	shell_builtin = sizeof(built) / sizeof(builtins);
+	shell_builtin = sizeof(built) / sizeof(struct builtins);
 
 	for (index = 0; index < shell_builtin; index++)
 	{

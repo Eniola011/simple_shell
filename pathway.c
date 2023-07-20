@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * find_path - locates path
  * @cmd: command
@@ -13,7 +14,9 @@ char *find_path(char *cmd)
 	if (cmd[0] == '/' || cmd[0] == '.')
 	{
 		if (stat(cmd, &test_file) == 0)
+		{
 			return (cmd);
+		}
 	}
 
 	pathway = getenv("PATH");
@@ -28,22 +31,30 @@ char *find_path(char *cmd)
 		{
 			dirlen = _strlen(pathtok);
 			diry = malloc(dirlen + cmdlen + 2);
-			_strcpy(diry, pathtok), _strcpy(diry, "/");
-			_strcpy(diry, cmd), _strcpy(diry, "\0");
+			_strcpy(diry, pathtok);
+			_strcat(diry, "/");
+			_strcat(diry, cmd);
+			_strcat(diry, "\0");
 
 
 			if (stat(diry, &test_file) == 0)
+			{
 				free(pathway2);
 				return (diry);
+			}
 
 			free(diry);
 			pathtok = strtok(NULL, ":");
 		}
+
 		free(pathway2);
 		if (stat(cmd, &test_file) == 0)
+		{
 			return (cmd);
+		}
 
 		return (NULL);
 	}
+
 	return (NULL);
 }

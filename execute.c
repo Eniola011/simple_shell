@@ -12,6 +12,8 @@ int exec_cmd(char **token)
 
 	env = environ;
 
+	builtin_command(token);
+
 	cmd = find_path(token[0]);
 	if (cmd == NULL)
 	{

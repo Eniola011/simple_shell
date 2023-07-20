@@ -13,7 +13,7 @@ void _memcpy(void *dest, const void *src, unsigned int n)
 	char *cptr1 = (char *)dest;
 	unsigned int index;
 
-	for (index = 0; index < size; index++)
+	for (index = 0; index < n; index++)
 	{
 		cptr1[index] = cptr[index];
 	}
