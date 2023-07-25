@@ -36,7 +36,7 @@ void builtin_command(char **arg)
 void shell_exit(char **arg)
 {
 	(void)arg;
-	exit(0);
+	exit(98);
 }
 
 /**
