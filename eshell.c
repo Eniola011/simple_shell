@@ -20,7 +20,7 @@ int main(void)
 		if (nread == -1)
 		{
 			write(2, "I'm leaving...\n", 16);
-			exit(1);
+			exit(127);
 		}
 
 		string = get_token(line, nread);
