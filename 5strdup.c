@@ -18,4 +18,5 @@ char *_strdup(const char *s)
 	}
 	_memcpy(n, s, length + 1);
 	return (n);
+	free(n);
 }

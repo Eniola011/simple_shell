@@ -32,11 +32,13 @@ char **get_token(char *line, ssize_t nread)
 	{
 		strings[index] = malloc(sizeof(char) * _strlen(string));
 		_strcpy(strings[index], string);
-
 		index++;
 		string = strtok(NULL, sep);
-	}
-	strings[index] = NULL;
 
+	}
+
+	strings[index] = NULL;
 	return (strings);
+	free(copy_line);
+	free(strings);
 }
