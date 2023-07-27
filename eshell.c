@@ -13,14 +13,14 @@ int main(void)
 
 	while (1)
 	{
-		write(2, "$ ", 2);
+		write(2, ":) ", 3);
 
 		line = read_a_line(&nread);
 
 		if (nread == -1)
 		{
-			write(2, "I'm leaving...\n", 16);
-			exit(127);
+			strerror(2);
+			exit(1);
 		}
 
 		string = get_token(line, nread);
