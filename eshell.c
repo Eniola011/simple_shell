@@ -19,7 +19,7 @@ int main(void)
 
 		if (nread == -1)
 		{
-			strerror(2);
+			write(2, "Exiting shell....\n", 18);
 			exit(1);
 		}
 

@@ -2,6 +2,7 @@
 
 /**
  * builtin_command - check for builtin functions.
+ * @struct builtins: handles builtin functions.
  * @arg: argument.
  * Return: the status code.
  */
@@ -9,6 +10,7 @@ void builtin_command(char **arg)
 {
 	int shell_builtin = 0, index;
 
+	/* struct builtins - handles builtin functions. */
 	struct builtins built[] = {
 		{"exit", shell_exit},
 		{"cd", shell_cd},

@@ -12,6 +12,8 @@
 
 extern char **environ;
 
+#define BUFFSIZE 1024
+
 /**
  * struct builtins - handles builtin functions.
  * @cmd: inputted commands
