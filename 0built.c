@@ -18,11 +18,11 @@ int (*find_builtin(char *cmd))(list_sh *)
 	};
 	int indx;
 
-	for (indx = 0; builtin[indx].tag; indx++)
+	for (indx = 0; builts[indx].tag; indx++)
 	{
-		if (_strcmp(builtin[indx].tag, cmd) == 0)
+		if (_strcmp(builts[indx].tag, cmd) == 0)
 			break;
 	}
 
-	return (builtin[indx].funt);
+	return (builts[indx].funt);
 }
