@@ -49,13 +49,13 @@ void setdata(list_sh *data, char **argmt)
 }
 
 /**
- * main - step 1
+ * main - checks code
  * @argc: argument count
  * @argv: argument vector
  *
  * Return: success(0).
  */
-int main(int argc, char **agrv)
+int main(int argc, char **argv)
 {
 	list_sh data;
 	(void) argc;
@@ -66,5 +66,6 @@ int main(int argc, char **agrv)
 	freedata(&data);
 	if (data.status < 0)
 		return (255);
+
 	return (data.status);
 }
