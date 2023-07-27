@@ -39,10 +39,7 @@ char *find_path(char *cmd)
 			pathtok = strtok(NULL, ":");
 		}
 		free(pathway2);
-		if (stat(cmd, &test_file) == 0)
-		{
-			return (cmd);
-		}
+
 		return (NULL);
 	}
 	return (NULL);

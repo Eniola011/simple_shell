@@ -25,6 +25,7 @@ int exec_cmd(char **token)
 	if (child == 0)
 	{
 		execve(cmd, token, env);
+		free(token);
 		perror(token[0]);
 		return (-1);
 	}
