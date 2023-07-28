@@ -12,9 +12,9 @@
 #include <signal.h>
 #include <limits.h>
 
-#define BUFF 1024
 #define TOKEN_BUFFSIZE 128
 #define TOKEN_DELIM " \t\r\n\a"
+#define BUFF 1024
 
 extern char **environ;
 
