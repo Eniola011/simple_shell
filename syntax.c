@@ -125,12 +125,12 @@ void print_syntaxerror(list_sh *data, char *str, int i, int bull)
 	err = malloc(sizeof(char) * (len + 1));
 	if (err == 0)
 	{
-		free(count);
+		free(n);
 		return;
 	}
 	_strcpy(err, data->argv[0]);
 	_strcat(err, ": ");
-	_strcat(err, count);
+	_strcat(err, n);
 	_strcat(err, text1);
 	_strcat(err, text0);
 	_strcat(err, text2);
@@ -138,7 +138,7 @@ void print_syntaxerror(list_sh *data, char *str, int i, int bull)
 
 	write(STDERR_FILENO, err, len);
 	free(err);
-	free(count);
+	free(n);
 }
 
 /**

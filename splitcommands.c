@@ -52,7 +52,7 @@ char *dup_char(char *tok, int bull)
 void addanodes(sep_list **head1, cmd_list **head2, char *strng)
 {
 	int i;
-	char *lineptr;
+	char *ptr;
 
 	strng = dup_char(strng, 0);
 
@@ -68,12 +68,12 @@ void addanodes(sep_list **head1, cmd_list **head2, char *strng)
 		}
 	}
 
-	lineptr = _strtok(strng, ";|&");
+	ptr = _strtok(strng, ";|&");
 	do {
-		lineptr = dup_char(lineptr, 1);
-		add_node(head2, lineptr);
-		lineptr = _strtok(NULL, ";|&");
-	} while (lineptr != NULL);
+		ptr = dup_char(ptr, 1);
+		add_line(head2, ptr);
+		ptr = _strtok(NULL, ";|&");
+	} while (ptr != NULL);
 
 }
 
