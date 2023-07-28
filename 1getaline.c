@@ -40,6 +40,7 @@ ssize_t _getline(char **line, size_t *n, FILE *strm)
 
 		buf[argmt] = chr, argmt++;
 	}
+
 	buf[argmt] = '\0';
 	_line(line, n, buf, argmt);
 	value = argmt;
