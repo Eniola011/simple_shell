@@ -9,7 +9,7 @@ void help_env(void)
 	char *asst = "env: env [option] [name=value] [command [args]]\n\t";
 
 	write(STDOUT_FILENO, asst, _strlen(asst));
-	asst = "Print the enviroment of the shell.\n";
+	asst = "Print the env of the shell.\n";
 	write(STDOUT_FILENO, asst, _strlen(asst));
 
 }
@@ -26,7 +26,7 @@ void help_setenv(void)
 	write(STDOUT_FILENO, asst, _strlen(asst));
 	asst = "int replace)\n\t";
 	write(STDOUT_FILENO, asst, _strlen(asst));
-	asst = "Add a new definition to the environment\n";
+	asst = "Add a new def to the env\n";
 	write(STDOUT_FILENO, asst, _strlen(asst));
 }
 
@@ -52,15 +52,15 @@ void help_general(void)
 	char *asst = ":)$ bash, version 1.0(1)-release\n";
 
 	write(STDOUT_FILENO, asst, _strlen(asst));
-	asst = "These commands are defined internally.Type 'asst' to see the list";
+	asst = "These are defined commands,.type 'asst' to see more on the list";
 	write(STDOUT_FILENO, asst, _strlen(asst));
-	asst = "Type 'asst name' to find out more about the function 'name'.\n\n ";
+	asst = "Type 'asst name' to find out more about the function 'assist'.\n\n ";
 	write(STDOUT_FILENO, asst, _strlen(asst));
 	asst = " alias: alias [name=['string']]\n cd: cd [-L|[-P [-e]] [-@]] ";
 	write(STDOUT_FILENO, asst, _strlen(asst));
 	asst = "[dir]\nexit: exit [n]\n  env: env [option] [name=value] [command ";
 	write(STDOUT_FILENO, asst, _strlen(asst));
-	asst = "[args]]\n  setenv: setenv [variable] [value]\n  unsetenv: ";
+	asst = "[argc]]\n  setenv: setenv [variable] [value]\n  unsetenv: ";
 	write(STDOUT_FILENO, asst, _strlen(asst));
 	asst = "unsetenv [variable]\n";
 	write(STDOUT_FILENO, asst, _strlen(asst));
@@ -75,7 +75,7 @@ void help_exit(void)
 	char *asst = "exit: exit [n]\n Exit shell.\n";
 
 	write(STDOUT_FILENO, asst, _strlen(asst));
-	asst = "Exits the shell with a status of N. If N is ommited, the exit";
+	asst = "leave shell with a status of N. If N is not there, then leave";
 	write(STDOUT_FILENO, asst, _strlen(asst));
 	asst = "what is the last command executed\n";
 	write(STDOUT_FILENO, asst, _strlen(asst));
