@@ -150,7 +150,7 @@ char *replace_token(varb_list **h, char *tok, char *new_tok, int sum_b);
 char *replace_var(char *token, list_sh *data);
 
 /* getaline.c */
-void _line(char **line, size_t *n, char *buff, size_t i));
+void _line(char **line, size_t *n, char *buff, size_t i);
 ssize_t _getline(char **line, size_t *n, FILE *strm);
 
 /* 0exec.c */
