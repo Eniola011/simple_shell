@@ -60,7 +60,7 @@ int find_varb(varb_list **h, char *str, char *sts, list_sh *data)
 		if (str[i] == '$')
 		{
 			if (str[i + 1] == '?')
-				add_var_node(h, 2, sts, last), i++;
+				add_var_node(h, 2, sts, first), i++;
 			else if (str[i + 1] == '$')
 				add_var_node(h, 2, data->pidd, last), i++;
 			else if (str[i + 1] == '\n')
@@ -144,7 +144,7 @@ char *replace_var(char *token, list_sh *data)
 	char *status, *new_token;
 	int sum_a, sum_b;
 
-	status = aux_itoa(data->status);
+	status = _itoa(data->status);
 	head = NULL;
 
 	sum_a = find_varb(&head, token, status, data);
@@ -160,7 +160,7 @@ char *replace_var(char *token, list_sh *data)
 
 	while (index != NULL)
 	{
-		sum_b += (index->valuelen - indx->varlen);
+		sum_b += (index->valuelen - index->varlen);
 		index = index->next;
 	}
 
@@ -169,7 +169,7 @@ char *replace_var(char *token, list_sh *data)
 	new_token = malloc(sizeof(char) * (sum_b + 1));
 	new_token[sum_b] = '\0';
 
-	new_token = replaced_input(&head, token, new_token, sum_b);
+	new_token = replace_token(&head, token, new_token, sum_b);
 
 	free(token);
 	free(status);

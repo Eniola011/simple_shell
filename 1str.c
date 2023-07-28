@@ -73,7 +73,7 @@ char *_strtok(char str[], const char *delim)
 
 	if (str != NULL)
 	{
-		if (cmpchar(str, delim))
+		if (cmpchr(str, delim))
 			return (NULL);
 		strng = str;
 		i = _strlen(str);

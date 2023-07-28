@@ -71,7 +71,7 @@ void addanodes(sep_list **head1, cmd_list **head2, char *strng)
 	lineptr = _strtok(strng, ";|&");
 	do {
 		lineptr = dup_char(lineptr, 1);
-		add_node(head1, lineptr);
+		add_node(head2, lineptr);
 		lineptr = _strtok(NULL, ";|&");
 	} while (lineptr != NULL);
 
@@ -128,7 +128,7 @@ int split_cmds(list_sh *data, char *str)
 {
 
 	sep_list *head1, *list1;
-	line_list *head2, *list2;
+	cmd_list *head2, *list2;
 	int nread;
 
 	head1 = NULL;
