@@ -13,10 +13,10 @@ int find_error(list_sh *data, int errval)
 	switch (errval)
 	{
 	case -1:
-		error = env_error(data);
+		err = env_error(data);
 		break;
 	case 126:
-		error = error_126(data);
+		err = error_126(data);
 		break;
 	case 127:
 		err = not_found(data);
@@ -25,7 +25,7 @@ int find_error(list_sh *data, int errval)
 		if (_strcmp("exit", data->argc[0]) == 0)
 			err = exit_shell(data);
 		else if (_strcmp("cd", data->argc[0]) == 0)
-			err = get_cd(data);
+			err = error_cd(data);
 		break;
 	}
 
