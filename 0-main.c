@@ -64,8 +64,8 @@ int main(int argc, char **argv)
 	setdata(&data, argv);
 	hsh_loop(&data);
 	freedata(&data);
-	if (data->status < 0)
+	if (data.status < 0)
 		return (255);
 
-	return (data->status);
+	return (data.status);
 }
