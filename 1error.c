@@ -45,7 +45,7 @@ char *error_126(list_sh *data)
 {
 	int len;
 	char *strng;
-	char *error;
+	char *err;
 
 	strng = _itoa(data->count);
 	len = _strlen(data->argv[0]) + _strlen(strng);

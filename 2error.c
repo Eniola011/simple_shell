@@ -18,7 +18,7 @@ char *strcat_cd(list_sh *data, char *txt, char *err, char *str)
 	_strcat(err, ": ");
 	_strcat(err, data->argc[0]);
 	_strcat(err, txt);
-	if (datash->args[1][0] == '-')
+	if (data->argc[1][0] == '-')
 	{
 		illegal_flag = malloc(3);
 		illegal_flag[0] = '-';

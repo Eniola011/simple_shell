@@ -48,20 +48,20 @@ void hsh_loop(list_sh *data)
 	while (path == 1)
 	{
 		write(STDIN_FILENO, ":)$ ", 4);
-		input = read_a_line(&nread);
+		tok = read_a_line(&nread);
 		if (nread != -1)
 		{
 			tok = _comment(tok);
 			if (tok == NULL)
 				continue;
 
-			if (check_error(data, tok) == 1)
+			if (check_syntaxerror(data, tok) == 1)
 			{
 				data->status = 2;
 				free(tok);
 				continue;
 			}
-			tok = repr_var(tok, data);
+			tok = replace_var(tok, data);
 			path = split_cmds(data, tok);
 			data->count += 1;
 			free(tok);

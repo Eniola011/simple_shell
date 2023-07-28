@@ -63,7 +63,7 @@ int _env(list_sh *data)
 		for (b = 0; data->_env[a][b]; b++)
 			;
 
-		write(STDOUT_FILENO, data->_env[a], bb);
+		write(STDOUT_FILENO, data->_env[a], b);
 		write(STDOUT_FILENO, "\n", 1);
 	}
 	data->status = 0;

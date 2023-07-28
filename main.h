@@ -134,7 +134,7 @@ char *_comment(char *token);
 void hsh_loop(list_sh *data);
 
 /* readaline.c */
-char *readaline(int *i_eof);
+char *read_a_line(int *nread);
 
 /* splitcommands.c */
 char *dup_char(char *tok, int bull);

@@ -49,7 +49,7 @@ char *dup_char(char *tok, int bull)
  * @strng: string
  * Return: no value
  */
-void addanodes(sep_list **head1, line_list **head2, char *strng)
+void addanodes(sep_list **head1, cmd_list **head2, char *strng)
 {
 	int i;
 	char *lineptr;
@@ -124,7 +124,7 @@ void _next(sep_list **list1, cmd_list **list2, list_sh *data)
  * @str: string
  * Return: continue(1), exit(0)
  */
-int split_cmds(data_shell *data, char *str)
+int split_cmds(list_sh *data, char *str)
 {
 
 	sep_list *head1, *list1;

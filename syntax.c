@@ -37,7 +37,7 @@ int _error(char *str, int i, char tok)
 		if (tok == '|' || tok == '&' || tok == ';')
 			return (i);
 
-	if (*tok == '|')
+	if (*str == '|')
 	{
 		if (tok == ';' || tok == '&')
 			return (i);
@@ -63,7 +63,7 @@ int _error(char *str, int i, char tok)
 		}
 	}
 
-	return (_error(input + 1, i + 1, *str));
+	return (_error(str + 1, i + 1, *str));
 }
 
 /**
@@ -118,8 +118,8 @@ void print_syntaxerror(list_sh *data, char *str, int i, int bull)
 
 	text1 = ": Syntax error: \"";
 	text2 = "\" unexpected\n";
-	n = aux_itoa(data->count);
-	len = _strlen(data->argv[0]) + _strlen(count);
+	n = _itoa(data->count);
+	len = _strlen(data->argv[0]) + _strlen(n);
 	len += _strlen(text0) + _strlen(text1) + _strlen(text2) + 2;
 
 	err = malloc(sizeof(char) * (len + 1));
