@@ -179,7 +179,7 @@ char **splitline(char *strng)
 	toks = malloc(sizeof(char *) * (buffy));
 	if (toks == NULL)
 	{
-		write(STDERR_FILENO, ": allocation error\n", 18);
+		write(STDERR_FILENO, ": mem allocation error\n", 18);
 		exit(EXIT_FAILURE);
 	}
 
@@ -194,7 +194,7 @@ char **splitline(char *strng)
 			toks = _reallocdp(toks, i, sizeof(char *) * buffy);
 			if (toks == NULL)
 			{
-				write(STDERR_FILENO, ": allocation error\n", 18);
+				write(STDERR_FILENO, ": mem allocation error\n", 18);
 				exit(EXIT_FAILURE);
 			}
 		}
