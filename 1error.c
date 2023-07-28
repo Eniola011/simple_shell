@@ -13,7 +13,7 @@ char *env_error(list_sh *data)
 	char *txt;
 
 	strng = _itoa(data->count);
-	txt = ": Unable to add/remove from environment\n";
+	txt = ": inability to add/remove from environment\n";
 	len = _strlen(data->argv[0]) + _strlen(strng);
 	len += _strlen(data->argc[0]) + _strlen(txt) + 4;
 	err = malloc(sizeof(char) * (len + 1));
