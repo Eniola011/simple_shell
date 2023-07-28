@@ -45,7 +45,7 @@ void setdata(list_sh *data, char **argmt)
 	}
 
 	data->_env[i] = NULL;
-	data->pidd = aux_itoa(getpid());
+	data->pidd = _itoa(getpid());
 }
 
 /**
