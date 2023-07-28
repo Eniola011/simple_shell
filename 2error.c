@@ -10,7 +10,7 @@
  */
 char *strcat_cd(list_sh *data, char *txt, char *err, char *str)
 {
-	char *illegal_flag;
+	char *ill_flag;
 
 	_strcpy(err, data->argv[0]);
 	_strcat(err, ": ");
@@ -20,12 +20,12 @@ char *strcat_cd(list_sh *data, char *txt, char *err, char *str)
 	_strcat(err, txt);
 	if (data->argc[1][0] == '-')
 	{
-		illegal_flag = malloc(3);
-		illegal_flag[0] = '-';
-		illegal_flag[1] = data->argc[1][1];
-		illegal_flag[2] = '\0';
-		_strcat(err, illegal_flag);
-		free(illegal_flag);
+		ill_flag = malloc(3);
+		ill_flag[0] = '-';
+		ill_flag[1] = data->argc[1][1];
+		ill_flag[2] = '\0';
+		_strcat(err, ill_flag);
+		free(ill_flag);
 	}
 	else
 	{
